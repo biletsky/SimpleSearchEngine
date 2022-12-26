@@ -26,7 +26,7 @@ public class Main {
             System.out.println("Enter data to search people:");
             String key = scanner.next();
             for (String text : list) {
-                if(Pattern.compile(Pattern.quote(key), Pattern.CASE_INSENSITIVE).matcher(text).find()){
+                if (Pattern.compile(Pattern.quote(key), Pattern.CASE_INSENSITIVE).matcher(text).find()) {
                     changedList.add(text);
                 }
             }

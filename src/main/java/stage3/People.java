@@ -5,11 +5,12 @@ import java.util.List;
 
 public class People {
     List<String> people = new ArrayList<>();
+
     public List<String> getPeople() {
         return people;
     }
 
-    public void addPerson(String person){
+    public void addPerson(String person) {
         people.add(person);
     }
 

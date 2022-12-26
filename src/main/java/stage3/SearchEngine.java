@@ -35,36 +35,31 @@ public class SearchEngine {
         }
     }
 
-    private void menuOption(){
+    private void menuOption() {
         System.out.println("=== Menu ===");
         System.out.println("1. Find a person");
         System.out.println("2. Print all people");
         System.out.println("0. Exit");
     }
+
     private void menu() {
         menuOption();
         int option = 6;
         while (option != 0) {
             option = scanner.nextInt();
             switch (option) {
-                case 1: {
+                case 1 -> {
                     findPerson();
                     menuOption();
-                break;
                 }
-                case 2: {
+                case 2 -> {
                     printPeople();
                     menuOption();
-                    break;
                 }
-                case 0: {
-                    System.out.println("Bye!");
-                    break;
-                }
-                default: {
+                case 0 -> System.out.println("Bye!");
+                default -> {
                     System.out.println("Incorrect option! Try again.");
                     menuOption();
-                    break;
                 }
             }
         }

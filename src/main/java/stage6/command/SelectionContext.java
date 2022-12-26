@@ -1,7 +1,6 @@
-package stage6;
+package stage6.command;
 
-import java.util.ArrayList;
-import java.util.Map;
+import stage6.People;
 import java.util.Set;
 
 public class SelectionContext {
@@ -12,8 +11,8 @@ public class SelectionContext {
         this.algorithm = algorithm;
     }
 
-    public Set<String> selectPeople(Map<String, ArrayList<Integer>> mapWords, String query, People people) {
-        return algorithm.select(mapWords, query, people);
+    public Set<String> selectPeople(String query, People people) {
+        return algorithm.select(query, people);
     }
 
     public void printPeople(Set<String> persons) {

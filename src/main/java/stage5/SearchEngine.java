@@ -1,7 +1,7 @@
 package stage5;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Scanner;
 
 public class SearchEngine {
     Scanner scanner = new Scanner(System.in);
@@ -21,8 +21,7 @@ public class SearchEngine {
             for (Integer i : people.mapWords().get(key.toUpperCase())) {
                 System.out.println(people.getPeopleList().get(i));
             }
-        }
-        else {
+        } else {
             System.out.println("No matching people found.");
         }
     }
@@ -41,24 +40,18 @@ public class SearchEngine {
             Scanner scanner = new Scanner(System.in);
             option = scanner.nextInt();
             switch (option) {
-                case 1: {
+                case 1 -> {
                     findPerson();
                     menuOption();
-                    break;
                 }
-                case 2: {
+                case 2 -> {
                     printPeople();
                     menuOption();
-                    break;
                 }
-                case 0: {
-                    System.out.println("Bye!");
-                    break;
-                }
-                default: {
+                case 0 -> System.out.println("Bye!");
+                default -> {
                     System.out.println("Incorrect option! Try again.");
                     menuOption();
-                    break;
                 }
             }
         }

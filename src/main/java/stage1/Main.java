@@ -13,14 +13,13 @@ public class Main {
         int number = 0;
         for (String s : array) {
             i++;
-            if(s.equals(key)){
+            if (s.equals(key)) {
                 number = i;
             }
         }
         if (number > 0) {
             System.out.println(number);
-        }
-        else {
+        } else {
             System.out.println("Not found");
         }
     }
